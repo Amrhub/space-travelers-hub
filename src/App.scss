@@ -1,0 +1,9 @@
+@import 'abstract/common';
+
+.App {
+  padding: 0 $container-padding;
+}
+
+.main {
+  padding: $inner-padding;
+}
