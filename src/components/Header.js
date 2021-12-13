@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import planet from '../assets/planet.png';
 import './Header.scss';
 
@@ -8,7 +9,17 @@ function Header() {
         <img src={planet} alt="planet-logo" />
         <h1>Space Tavelers&apos; Hub</h1>
       </div>
-      <nav />
+      <nav>
+        <NavLink to="/rockets">
+          Rockets
+        </NavLink>
+        <NavLink to="/missions">
+          Missions
+        </NavLink>
+        <NavLink to="/profile">
+          My Profile
+        </NavLink>
+      </nav>
     </header>
   );
 }

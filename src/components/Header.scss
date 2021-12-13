@@ -1,5 +1,7 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 3vh 5vw;
   gap: 10px;
   background-color: skyblue;
@@ -12,6 +14,20 @@
 
     img {
       height: 65px;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 3vw;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .active {
+      text-decoration: underline;
     }
   }
 }
