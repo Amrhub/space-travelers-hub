@@ -1,4 +1,4 @@
-import planet from '../planet.png';
+import planet from '../assets/planet.png';
 import './Header.scss';
 
 function Header() {
