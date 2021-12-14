@@ -9,7 +9,7 @@ const Header = () => (
       <h1>Space Tavelers&apos; Hub</h1>
     </div>
     <nav>
-      <NavLink to="/rockets">Rockets</NavLink>
+      <NavLink to="/">Rockets</NavLink>
       <NavLink to="/missions">Missions</NavLink>
       <NavLink to="/profile">My Profile</NavLink>
     </nav>
