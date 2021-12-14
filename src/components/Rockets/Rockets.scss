@@ -1,0 +1,25 @@
+.rockets-container {
+  .rocket-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    gap: 2rem;
+  }
+
+  .rocket-item {
+    gap: 2rem;
+
+    img {
+      height: 350px;
+      width: 490px;
+    }
+
+    &__info {
+      gap: 2rem;
+
+      &__btn {
+        align-self: flex-start;
+      }
+    }
+  }
+}
