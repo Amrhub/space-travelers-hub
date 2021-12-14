@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Badge from '../../abstracts/styledComponents/Badge.style';
+import Button from '../../abstracts/styledComponents/Button.style';
 
 import { fetchRockets } from '../../redux/rockets/rockets';
 import './Rockets.scss';
@@ -25,9 +26,7 @@ const rockets = () => {
                 <Badge text="reserved" isActive />
                 {rocket.description}
               </p>
-              <button type="button" className="rocket-item__info__btn">
-                Reserve Rocket
-              </button>
+              <Button isRocketReserved />
             </div>
           </li>
         ))}
