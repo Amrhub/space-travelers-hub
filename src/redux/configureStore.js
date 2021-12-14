@@ -9,6 +9,6 @@ const reducer = combineReducers({
   missions: missionsReducer,
 });
 
-const store = createStore(reducer, applyMiddleware(logger, thunk));
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 export default store;
