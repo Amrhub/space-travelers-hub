@@ -10,8 +10,18 @@
     gap: 2rem;
 
     img {
-      height: 350px;
-      width: 490px;
+      height: 100%;
+      max-height: 350px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    span {
+      margin-right: 1rem;
+    }
+
+    .rocket-description {
+      line-height: 1.75;
     }
 
     &__info {
