@@ -22,7 +22,7 @@ export const fetchRockets = () => async (dispatch) => {
       id: rocket.id,
       name: rocket.rocket_name,
       type: rocket.rocket_type,
-      flickerImage: rocket.flickr_images[0],
+      image: rocket.flickr_images[0],
       description: rocket.description,
     };
     rockets.push(rocketDesiredProperties);
