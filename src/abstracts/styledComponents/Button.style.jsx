@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ isRocketReserved, isMissionJoined }) => {
+const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
   let style = {
     borderRadius: '4px',
     padding: '0.5rem',
@@ -31,7 +31,7 @@ const Button = ({ isRocketReserved, isMissionJoined }) => {
   }
 
   return (
-    <button type="button" style={style}>
+    <button type="button" onClick={onClick} style={style}>
       {text}
     </button>
   );
@@ -40,6 +40,7 @@ const Button = ({ isRocketReserved, isMissionJoined }) => {
 Button.propTypes = {
   isRocketReserved: PropTypes.bool,
   isMissionJoined: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;
