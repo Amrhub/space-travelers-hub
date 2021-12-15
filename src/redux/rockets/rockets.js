@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 const STORE_DATA = 'SPACE_TRAVELERS_HUB/ROCKETS/STORE_DATA';
+const TOGGLE_RESERVATION = 'SPACE_TRAVELERS_HUB/ROCKETS/TOGGLE_RESERVATION';
 
 const apiURL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -8,6 +9,11 @@ const initialState = [];
 
 export const storeData = (payload) => ({
   type: STORE_DATA,
+  payload,
+});
+
+export const toggleReservation = (payload) => ({
+  type: TOGGLE_RESERVATION,
   payload,
 });
 
@@ -24,6 +30,7 @@ export const fetchRockets = () => async (dispatch) => {
       type: rocket.rocket_type,
       image: rocket.flickr_images[0],
       description: rocket.description,
+      isReserved: false,
     };
     rockets.push(rocketDesiredProperties);
   });
@@ -35,6 +42,10 @@ const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case STORE_DATA:
       return payload;
+    case TOGGLE_RESERVATION:
+      return _.map(state, (rocket) => (
+        rocket.id === payload ? { ...rocket, isReserved: !rocket.isReserved } : rocket
+      ));
     default:
       return state;
   }

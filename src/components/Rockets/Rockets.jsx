@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import Badge from '../../abstracts/styledComponents/Badge.style';
 import Button from '../../abstracts/styledComponents/Button.style';
-
-import { fetchRockets } from '../../redux/rockets/rockets';
+import { fetchRockets, toggleReservation } from '../../redux/rockets/rockets';
 import './Rockets.scss';
 
 const rockets = () => {
@@ -14,19 +14,25 @@ const rockets = () => {
     if (!rockets.length) dispatch(fetchRockets());
   }, []);
 
+  const handleRocketReservation = (rocketId) => {
+    dispatch(toggleReservation(rocketId));
+  };
   return (
     <main className="main rockets-container">
       <ul className="rocket-list flex flex-column">
         {rockets.map((rocket) => (
-          <li key={rocket.id} className="rocket-item flex" data-id={rocket.id}>
+          <li key={rocket.id} className="rocket-item flex">
             <img src={rocket.image} alt={rocket.name} />
             <div className="rocket-item__info flex flex-column">
               <h3 className="rocket-name">{rocket.name}</h3>
               <p className="rocket-description">
-                <Badge text="reserved" isActive />
+                {rocket.isReserved && <Badge text="reserved" isActive />}
                 {rocket.description}
               </p>
-              <Button isRocketReserved />
+              <Button
+                isRocketReserved={rocket.isReserved}
+                onClick={() => handleRocketReservation(rocket.id)}
+              />
             </div>
           </li>
         ))}
