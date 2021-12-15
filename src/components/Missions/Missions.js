@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Badge from '../../abstracts/styledComponents/Badge.style';
 import Button from '../../abstracts/styledComponents/Button.style';
-import { fetchMissions } from '../../redux/missions/missions';
+import {
+  fetchMissions,
+  toggleMissionReservation,
+} from '../../redux/missions/missions';
 import './Missions.scss';
 
 const Missions = () => {
@@ -12,6 +15,10 @@ const Missions = () => {
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissions());
   }, []);
+
+  const handleMissionReservation = (id) => {
+    dispatch(toggleMissionReservation(id));
+  };
 
   return (
     <main className="main">
@@ -35,7 +42,10 @@ const Missions = () => {
                   <Badge text="active member" isActive />
                 </td>
                 <td className="mission-join">
-                  <Button isMissionJoined={false} />
+                  <Button
+                    isMissionJoined={mission.reserved}
+                    onClick={() => handleMissionReservation(mission.mission_id)}
+                  />
                 </td>
               </tr>
             );
