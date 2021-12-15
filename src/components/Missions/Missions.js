@@ -39,7 +39,10 @@ const Missions = () => {
                 <td className="mission-title">{mission.mission_name}</td>
                 <td>{mission.description}</td>
                 <td className="mission-status">
-                  <Badge text="active member" isActive />
+                  <Badge
+                    text={mission.reserved ? 'active member' : 'NOT A MEMBER'}
+                    isActive={mission.reserved}
+                  />
                 </td>
                 <td className="mission-join">
                   <Button
