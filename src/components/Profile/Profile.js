@@ -4,9 +4,9 @@ import './Profile.scss';
 
 const Profile = () => (
   <main className="main profile">
-    <ReservedRockets />
     {/* for missions */}
     <section />
+    <ReservedRockets />
   </main>
 );
 
