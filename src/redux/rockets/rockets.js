@@ -42,15 +42,10 @@ const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case STORE_DATA:
       return payload;
-    case TOGGLE_RESERVATION: {
-      const newState = _.map(state, (rocket) => {
-        if (rocket.id === payload) {
-          return { ...rocket, isReserved: !rocket.isReserved };
-        }
-        return rocket;
-      });
-      return newState;
-    }
+    case TOGGLE_RESERVATION:
+      return _.map(state, (rocket) => (
+        rocket.id === payload ? { ...rocket, isReserved: !rocket.isReserved } : rocket
+      ));
     default:
       return state;
   }
