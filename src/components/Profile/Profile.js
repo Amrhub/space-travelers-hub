@@ -1,5 +1,13 @@
 import React from 'react';
+import ReservedRockets from './ReservedRockets';
+import './Profile.scss';
 
-const Profile = () => <main className="main">Under construction</main>;
+const Profile = () => (
+  <main className="main profile">
+    {/* for missions */}
+    <section />
+    <ReservedRockets />
+  </main>
+);
 
 export default Profile;
