@@ -3,14 +3,4 @@
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
   gap: 2rem;
-
-  & > * {
-    &:first-child {
-      background-color: teal;
-    }
-
-    &:nth-child(2) {
-      background-color: turquoise;
-    }
-  }
 }

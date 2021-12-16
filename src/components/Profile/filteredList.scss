@@ -1,0 +1,30 @@
+@import '../../abstracts/common.scss';
+
+.filtered-list {
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: $profile-title-mb;
+  }
+
+  &__list {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+
+    &__item {
+      display: block;
+      padding: $profile-card-padding;
+
+      &__title {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
+
+    &__item + &__item {
+      border-top: 1px solid $border-color;
+    }
+  }
+}
