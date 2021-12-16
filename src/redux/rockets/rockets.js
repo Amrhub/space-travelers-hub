@@ -31,7 +31,6 @@ export const fetchRockets = () => async (dispatch) => {
     const data = await response.json();
     let rocketDesiredProperties = {};
     const rockets = [];
-
     _.forEach(data, (rocket) => {
       rocketDesiredProperties = {
         id: rocket.id,
@@ -40,6 +39,7 @@ export const fetchRockets = () => async (dispatch) => {
         image: rocket.flickr_images[0],
         description: rocket.description,
         isReserved: false,
+        link: rocket.wikipedia,
       };
       rockets.push(rocketDesiredProperties);
     });
