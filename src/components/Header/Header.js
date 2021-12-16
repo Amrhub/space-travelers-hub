@@ -9,9 +9,15 @@ const Header = () => (
       <h1>Space Travelers&apos; Hub</h1>
     </div>
     <nav>
-      <NavLink to="/">Rockets</NavLink>
-      <NavLink to="/missions">Missions</NavLink>
-      <NavLink to="/profile">My Profile</NavLink>
+      <NavLink className="nav-link" to="/">
+        Rockets
+      </NavLink>
+      <NavLink className="nav-link" to="/missions">
+        Missions
+      </NavLink>
+      <NavLink className="nav-link" to="/profile">
+        My Profile
+      </NavLink>
     </nav>
   </header>
 );

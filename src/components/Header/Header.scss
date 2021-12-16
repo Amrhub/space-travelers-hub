@@ -2,7 +2,6 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: $inner-padding;
   gap: 10px;
@@ -22,14 +21,37 @@
   nav {
     display: flex;
     gap: 3vw;
+    margin-left: auto;
 
-    a {
-      text-decoration: none;
+    .nav-link {
       color: inherit;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        transition: all 0.3s ease;
+      }
     }
 
-    .active {
-      text-decoration: underline;
+    .nav-link:hover::after {
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+    }
+
+    .active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #18a2b8 !important;
     }
   }
 }
