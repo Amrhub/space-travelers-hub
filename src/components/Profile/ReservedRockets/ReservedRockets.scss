@@ -1,0 +1,30 @@
+.reserved-rockets {
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+
+    &__item {
+      display: block;
+      padding: 1rem 1rem 1.5rem 1rem;
+      height: 100%;
+      max-height: 300px;
+
+      &__title {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
+
+    &__item + &__item {
+      border-top: 1px solid #dfdfdf;
+    }
+  }
+}

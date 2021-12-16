@@ -1,5 +1,5 @@
 import React from 'react';
-import ReservedRockets from './ReservedRockets';
+import ReservedRockets from './ReservedRockets/ReservedRockets';
 import './Profile.scss';
 
 const Profile = () => (
