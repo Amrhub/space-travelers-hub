@@ -4,7 +4,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-Single-page application that displays SpaceX rockets and missions.
+Single-page application that displays SpaceX rockets and missions, allows you to book a rocket or join a mission and see all your booked rockets and your joined mission in your profile page
 
 ## Built With
 
