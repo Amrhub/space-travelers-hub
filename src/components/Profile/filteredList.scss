@@ -14,8 +14,13 @@
     padding: 0;
 
     &__item {
-      display: block;
+      display: flex;
+      gap: 10px;
       padding: $profile-card-padding;
+
+      .ex-link {
+        margin-left: auto;
+      }
 
       &__title {
         font-size: 1rem;
