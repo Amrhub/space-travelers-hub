@@ -2,13 +2,17 @@
 
 # Space Travelers' Hub
 
-> Single-page application that displays SpaceX rockets and missions.
-
 ![screenshot](./app_screenshot.png)
+
+Single-page application that displays SpaceX rockets and missions.
 
 ## Built With
 
+- HTML5 / SASS / JavaScript
 - React
+- React-Redux
+- Redux-Thunk for handling asynchronous dispatch
+- SpaceX API
 
 ## Getting Started
 
