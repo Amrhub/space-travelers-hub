@@ -3,10 +3,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
+  const focusHandler = (e) => {
+    e.target.classList.toggle('button--focus');
+  };
+
+  const hoverHandler = (e) => {
+    e.target.classList.toggle('button--hover');
+  };
+
   let style = {
     borderRadius: '4px',
     padding: '0.5rem',
-    fontSize: '1.05rem',
+    fontSize: '1.1rem',
+    transition: 'transform 0.2s',
   };
   let text = '';
 
@@ -17,7 +26,8 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
       color: isRocketReserved ? '#9aa0a5' : '#fff',
       border: isRocketReserved ? '1px solid #9aa0a5' : '1px solid #007bff',
       alignSelf: 'flex-start',
-      fontWeight: 'bold',
+      fontSize: '1.3rem',
+      padding: '0.75rem',
     };
     text = isRocketReserved ? 'Cancel Reservation' : 'Reserve Rocket';
   } else {
@@ -31,7 +41,15 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
   }
 
   return (
-    <button type="button" onClick={onClick} style={style}>
+    <button
+      type="button"
+      onClick={onClick}
+      style={style}
+      onMouseOver={hoverHandler}
+      onMouseLeave={hoverHandler}
+      onFocus={focusHandler}
+      onBlur={focusHandler}
+    >
       {text}
     </button>
   );

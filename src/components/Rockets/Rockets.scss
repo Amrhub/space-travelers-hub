@@ -26,6 +26,14 @@
 
     &__info {
       gap: 2rem;
+
+      .rocket-name {
+        font-size: 2rem;
+      }
+
+      .rocket-description {
+        font-size: 1.4rem;
+      }
     }
   }
 }
