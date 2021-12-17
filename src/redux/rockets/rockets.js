@@ -1,6 +1,3 @@
-/* eslint-disable function-paren-newline */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable no-confusing-arrow */
 import _ from 'lodash';
 
 const TOGGLE_RESERVATION = 'SPACE_TRAVELERS_HUB/ROCKETS/TOGGLE_RESERVATION';
@@ -55,11 +52,9 @@ const reducer = (state = initialState, { type, payload }) => {
     case FETCH_SUCCEED:
       return payload;
     case TOGGLE_RESERVATION:
-      return _.map(state, (rocket) =>
-        rocket.id === payload
-          ? { ...rocket, isReserved: !rocket.isReserved }
-          : rocket,
-      );
+      return _.map(state, (rocket) => (rocket.id === payload
+        ? { ...rocket, isReserved: !rocket.isReserved }
+        : rocket));
     case FETCH_FAILED:
       return {
         error: 'Failed to fetch data :(  please try to reload the page',
