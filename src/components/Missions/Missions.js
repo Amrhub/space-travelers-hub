@@ -32,27 +32,28 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission, index) => {
-            const colorClass = index % 2 === 0 ? 'grey-bg' : 'white-bg';
-            return (
-              <tr key={mission.mission_id} className={colorClass}>
-                <td className="mission-title">{mission.mission_name}</td>
-                <td>{mission.description}</td>
-                <td className="mission-status">
-                  <Badge
-                    text={mission.reserved ? 'active member' : 'NOT A MEMBER'}
-                    isActive={mission.reserved}
-                  />
-                </td>
-                <td className="mission-join">
-                  <Button
-                    isMissionJoined={mission.reserved}
-                    onClick={() => handleMissionReservation(mission.mission_id)}
-                  />
-                </td>
-              </tr>
-            );
-          })}
+          {!!missions.length
+            && missions.map((mission, index) => {
+              const colorClass = index % 2 === 0 ? 'grey-bg' : 'white-bg';
+              return (
+                <tr key={mission.mission_id} className={colorClass}>
+                  <td className="mission-title">{mission.mission_name}</td>
+                  <td>{mission.description}</td>
+                  <td className="mission-status">
+                    <Badge
+                      text={mission.reserved ? 'active member' : 'NOT A MEMBER'}
+                      isActive={mission.reserved}
+                    />
+                  </td>
+                  <td className="mission-join">
+                    <Button
+                      isMissionJoined={mission.reserved}
+                      onClick={() => handleMissionReservation(mission.mission_id)}
+                    />
+                  </td>
+                </tr>
+              );
+            })}
         </tbody>
       </table>
     </main>
