@@ -1,6 +1,6 @@
 .profile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(515px, 1fr));
   min-height: 100vh;
   gap: 2rem;
 }
