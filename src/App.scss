@@ -1,0 +1,59 @@
+@import 'abstracts/common';
+
+.App {
+  padding: 0 $container-padding;
+}
+
+.main {
+  padding: $inner-padding;
+}
+
+// utility classes
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.button--hover {
+  cursor: pointer;
+}
+
+.button--hover,
+.button--focus {
+  transform: scale(1.02);
+}
+
+.ex-link {
+  text-decoration: none;
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 4px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.ex-link + button {
+  padding: 0.5rem 0.25rem !important;
+  font-size: 1rem !important;
+}

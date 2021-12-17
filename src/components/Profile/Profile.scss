@@ -1,0 +1,12 @@
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(515px, 1fr));
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}

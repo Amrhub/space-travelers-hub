@@ -1,0 +1,50 @@
+@import '../../abstracts/common.scss';
+
+.filtered-list {
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: $profile-title-mb;
+  }
+
+  &__list {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+
+    &__item {
+      display: flex;
+      gap: 10px;
+      padding: $profile-card-padding;
+
+      .ex-link {
+        margin-left: auto;
+      }
+
+      &__title {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
+
+    &__item + &__item {
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filtered-list__list__item {
+    display: block;
+    padding: 1rem 0 1.5rem 0.5rem;
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    .ex-link {
+      margin-right: 1rem;
+    }
+  }
+}

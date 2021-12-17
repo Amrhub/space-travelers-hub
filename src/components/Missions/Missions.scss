@@ -1,0 +1,39 @@
+.missions-table {
+  border-collapse: collapse;
+  text-align: left;
+
+  td,
+  th {
+    border: 2px solid #dfdfdf;
+    padding: 10px;
+  }
+
+  .status-col,
+  .join-col {
+    min-width: 10vw;
+  }
+
+  .mission-title {
+    font-weight: bold;
+    vertical-align: text-top;
+  }
+
+  .mission-status,
+  .mission-join {
+    text-align: center;
+  }
+
+  .grey-bg {
+    background-color: #f3f3f3;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .missions-table {
+    font-size: 8px;
+
+    button {
+      font-size: 8px !important;
+    }
+  }
+}

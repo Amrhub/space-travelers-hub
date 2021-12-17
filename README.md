@@ -1,59 +1,73 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> One paragraph statement about the project.
+# Space Travelers' Hub
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
+Single-page application that displays SpaceX rockets and missions, allows you to book a rocket or join a mission and see all your booked rockets and your joined mission in your profile page
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo](https://space-travelers-hub-pa.netlify.app/)
 
+## Built With
+
+- HTML5 / SASS / JavaScript
+- React
+- React-Redux
+- Redux-Thunk for handling asynchronous dispatch
+- SpaceX API
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+Clone the repo and enter the directory.
 
-
-To get a local copy up and running follow these simple example steps.
+```shell
+git clone https://github.com/Amrhub/space-travelers-hub && cd space-travelers-hub
+```
 
 ### Prerequisites
 
-### Setup
+You need to have `npm` installed on your local machine.
 
 ### Install
 
+Install the npm packages.
+
+```shell
+npm install
+```
+
 ### Usage
 
-### Run tests
+Run `npm start` to start the local server and try the app.
 
-### Deployment
+```shell
+npm start
+```
 
+### Script
 
+Run all this with npm.
+
+- `npm start`: Starts the local server and opens the web app.
+
+- `npm build`: Builds the web app.
+
+- `npm test`: Runs the tests.
 
 ## Authors
 
-👤 **Author1**
+👤 **Amr Ahmed**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Amrhub](https://github.com/Amrhub/)
+- LinkedIn: [Amr Ahmed](https://www.linkedin.com/in/amr-ahmed-655420191/)
 
-👤 **Author2**
+👤 **Piero Lescano**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@piero-vic](https://github.com/piero-vic)
+- Twitter: [@v1ccenzo](https://twitter.com/v1ccenzo)
+- LinkedIn: [piero-lescano](https://linkedin.com/in/piero-lescano)
 
 ## 🤝 Contributing
 
@@ -64,12 +78,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
