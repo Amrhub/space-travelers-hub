@@ -14,6 +14,7 @@
       max-height: 350px;
       width: 100%;
       max-width: 450px;
+      margin-block: auto;
     }
 
     span {
@@ -34,6 +35,16 @@
       .rocket-description {
         font-size: 1.4rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .rocket-item {
+    flex-direction: column;
+
+    img {
+      max-width: 1000px !important;
     }
   }
 }
