@@ -27,3 +27,13 @@
     background-color: #f3f3f3;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .missions-table {
+    font-size: 8px;
+
+    button {
+      font-size: 8px !important;
+    }
+  }
+}
