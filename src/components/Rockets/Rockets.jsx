@@ -1,5 +1,3 @@
-/* eslint-disable operator-linebreak */
-// import _ from 'lodash';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -24,8 +22,8 @@ const rockets = () => {
       {!rockets.length && !rockets.error && <p>Loading...</p>}
       {rockets.error && <p className="error">{rockets.error}</p>}
       <ul className="rocket-list flex flex-column">
-        {!!rockets.length &&
-          rockets.map((rocket) => (
+        {!!rockets.length
+          && rockets.map((rocket) => (
             <li key={rocket.id} className="rocket-item flex">
               <img src={rocket.image} alt={rocket.name} />
               <div className="rocket-item__info flex flex-column">
