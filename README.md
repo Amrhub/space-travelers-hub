@@ -6,6 +6,10 @@
 
 Single-page application that displays SpaceX rockets and missions, allows you to book a rocket or join a mission and see all your booked rockets and your joined mission in your profile page
 
+## Live Demo
+
+[Live Demo](https://space-travelers-hub-pa.netlify.app/)
+
 ## Built With
 
 - HTML5 / SASS / JavaScript
