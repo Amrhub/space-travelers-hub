@@ -55,3 +55,11 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  .header-title {
+    h1 {
+      display: none;
+    }
+  }
+}
